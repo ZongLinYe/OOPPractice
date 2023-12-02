@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WaterBall_1._2
 {
-    internal class Chapter
+    public class Chapter
     {
         private string _name;
         private int _number;
@@ -16,7 +16,7 @@ namespace WaterBall_1._2
         {
             Number = number;
             Name = name;
-            Mission = missions;
+            Missions = missions;
         }
         public int Number
         {
@@ -34,7 +34,7 @@ namespace WaterBall_1._2
                 _name = value.LimitLength(1, 30);
             }
         }
-        public List<Mission> Mission
+        public List<Mission> Missions
         {
             get { return _missions; }
             private set

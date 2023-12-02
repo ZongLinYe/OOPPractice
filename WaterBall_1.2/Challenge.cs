@@ -10,6 +10,11 @@ namespace WaterBall_1._2
     {
         private string _name;
         private int _number;
+        public Challenge(int number, string name)
+        {
+            Number = number;
+            Name = name;
+        }
         public int Number
         {
             get { return _number; }

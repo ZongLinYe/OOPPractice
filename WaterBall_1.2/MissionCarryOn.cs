@@ -1,4 +1,5 @@
-﻿namespace WaterBall_1._2
+﻿
+namespace WaterBall_1._2
 {
     public class MissionCarryOn
     {
@@ -15,6 +16,12 @@
             Status = MissionStatus.Completed;
             Console.WriteLine($"【任務】學員 {Student.Account} \"{Mission.Name}\" ");
             Student.GainExperience(Mission.CalculateExperienceAward());
+        }
+
+        internal string GetMissionName()
+        {
+            //throw new NotImplementedException();
+            return Mission.Name;
         }
     }
 

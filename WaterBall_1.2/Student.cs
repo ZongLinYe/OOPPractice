@@ -13,14 +13,21 @@ namespace WaterBall_1._2
         //private int _level;
         //private int _experience;
         private List<MissionCarryOn> _missionCarryOns;
+        private List<Adventurer> _adventurers;
 
-        public Student(string account, string password, List<MissionCarryOn> missionCarryOns)
+        public Student(
+            string account, 
+            string password,
+            List<MissionCarryOn> missionCarryOns,
+            List<Adventurer> adventurers
+            )
         {
             Level = 1;
             Experience = 0;
             Account = account;
             Password = password;
             MissionCarryOns = missionCarryOns;
+            Adventurers = adventurers;
         }
         public List<MissionCarryOn> MissionCarryOns
         {
@@ -28,6 +35,14 @@ namespace WaterBall_1._2
             private set
             {
                 _missionCarryOns = value ?? throw new ArgumentNullException(nameof(value));
+            }
+        }
+        public List<Adventurer> Adventurers
+        {
+            get { return _adventurers; }
+            private set
+            {
+                _adventurers = value ?? throw new ArgumentNullException(nameof(value));
             }
         }
         public string Account { get; private set; }
